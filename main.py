@@ -127,11 +127,11 @@ if __name__ == '__main__':
     for apartment in manager.apartments.values():
         print(apartment.key, apartment.name, apartment.location, apartment.area_m2)
         for room in apartment.rooms.values():
-            print('\n', room.name, room.area_m2)
+            print('--', room.name, room.area_m2)
         
         for bill in manager.bills:
             if bill.apartment == apartment.key:
-                print('\n', bill.amount_pln, bill.date_due, bill.settlement_year, bill.settlement_month, bill.type)
+                print('--', bill.amount_pln, bill.date_due, bill.settlement_year, bill.settlement_month, bill.type)
 
     for tenant in manager.tenants.values():
         print(tenant.name, tenant.apartment, tenant.room, tenant.rent_pln, tenant.deposit_pln, tenant.date_agreement_from, tenant.date_agreement_to)
